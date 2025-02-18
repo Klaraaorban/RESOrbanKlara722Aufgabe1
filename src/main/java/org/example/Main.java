@@ -18,19 +18,16 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException, ParserConfigurationException, ParseException, SAXException {
         List<MyData> data = getXML();
-        for (MyData entry: data) {
-            System.out.println(entry);
-        }
-        getHeldenMitHöherenEinfluss(data, 0.5);
-        getGalaktischeKonfrontationen(data);
+//        for (MyData entry: data) {
+//            System.out.println(entry);
+//        }
+        getHeldenMitHöherenEinfluss(data);
+//        getGalaktischeKonfrontationen(data);
     }
 
     public static List<MyData> getFromXMLFile() {
@@ -68,20 +65,17 @@ public class Main {
         return events;
     }
 
-//    Anzeige von Helden mit einem höheren Globalen Einfluss als ein gegebener Wert (0.5 Punkte) mit stream
-    public static void getHeldenMitHöherenEinfluss(List<MyData> data, double einfluss) {
+    public static void getHeldenMitHöherenEinfluss(List<MyData> data) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the minimum global influence: ");
+        double minGlobalInfluence = scanner.nextDouble();
+        Set<String> helden = new LinkedHashSet<>();
         data.stream()
-                .filter(entry -> entry.getGlobalerEinfluss() > einfluss)
-                .forEach(System.out::println);
+                .filter(entry -> entry.getGlobalerEinfluss() > minGlobalInfluence)
+                .forEach(entry -> helden.add(entry.getHeld()));
+        helden.forEach(System.out::println);
     }
 
-//    Anzeige von "Galaktischen" Konfrontationen in absteigender Reihenfolge (0.5 Punkte)
-    public static void getGalaktischeKonfrontationen(List<MyData> data) {
-        data.stream()
-                .filter(entry -> entry.getKonfrontationstyp().equals(Konfrontationstyp.Galaktisch))
-                .sorted((e1, e2) -> e2.getDatum().compareTo(e1.getDatum()))
-                .forEach(System.out::println);
-    }
 
 
     public enum Konfrontationstyp{
