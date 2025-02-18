@@ -17,20 +17,23 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws IOException, ParserConfigurationException, ParseException, SAXException {
         List<MyData> data = getXML();
-//        for (MyData entry: data) {
-//            System.out.println(entry);
-//        }
+        for (MyData entry: data) {
+            System.out.println(entry);
+        }
 //        getHeldenMitHöherenEinfluss(data);
 //        getGalaktischeKonfrontationen(data);
-        saveReport(data);
+//        saveReport(data);
     }
 
     public static List<MyData> getFromXMLFile() {
@@ -120,6 +123,7 @@ public class Main {
         }
         writer.close();
     }
+
     public enum Konfrontationstyp{
         Individuell, Team, Galaktisch, Multiversal
     }
@@ -137,6 +141,11 @@ public class Main {
             this.logs = logs;
         }
     }
+
+    /**
+     * Data class for the log entries
+     * named MyData for generalization
+     */
 
     @XmlRootElement(name = "log")
     public static class MyData{
@@ -185,7 +194,6 @@ public class Main {
 
         @Override
         public String toString() {
-//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             return "MyData{" +
                     "Id=" + Id +
                     ", Held='" + Held + '\'' +
