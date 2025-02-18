@@ -14,7 +14,9 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -28,6 +30,7 @@ public class Main {
 //        }
 //        getHeldenMitHöherenEinfluss(data);
         getGalaktischeKonfrontationen(data);
+//        saveReport(data);
     }
 
     public static List<MyData> getFromXMLFile() {
@@ -58,7 +61,8 @@ public class Main {
             event.Antagonist = doc.getElementsByTagName("Antagonist").item(i).getTextContent();
             event.Konfrontationstyp = Konfrontationstyp.valueOf(doc.getElementsByTagName("Konfrontationstyp").item(i).getTextContent());
             event.Ort = doc.getElementsByTagName("Ort").item(i).getTextContent();
-            event.Datum = new SimpleDateFormat("yyyy-MM-dd").parse(doc.getElementsByTagName("Datum").item(i).getTextContent());
+//            event.Datum = new SimpleDateFormat("yyyy-MM-dd").parse(doc.getElementsByTagName("Datum").item(i).getTextContent());
+            event.Datum = LocalDate.parse(doc.getElementsByTagName("Datum").item(i).getTextContent());
             event.GlobalerEinfluss = Double.parseDouble(doc.getElementsByTagName("GlobalerEinfluss").item(i).getTextContent());
             events.add(event);
         }
@@ -80,9 +84,29 @@ public class Main {
         data.stream()
                 .filter(entry -> entry.getKonfrontationstyp().equals(Konfrontationstyp.Galaktisch))
                 .sorted((e1, e2) -> e2.getDatum().compareTo(e1.getDatum()))
-                .forEach(entry -> System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(entry.getDatum()) + ": " + entry.getHeld() + " vs. " + entry.getAntagonist() + " - " + entry.getOrt()));
+                .forEach(entry -> System.out.println(entry.getDatum() + ": " + entry.getHeld() + " vs. " + entry.getAntagonist() + " - " + entry.getOrt()));
     }
 
+    public static void saveReport(List<MyData> data) throws FileNotFoundException {
+        Map<Konfrontationstyp, Integer> konfrontationen = new HashMap<>();
+        Map<Konfrontationstyp, Double> impact = new HashMap<>();
+        for (MyData entry: data) {
+            konfrontationen.put(entry.getKonfrontationstyp(), konfrontationen.getOrDefault(entry.getKonfrontationstyp(), 0) + 1);
+            impact.put(entry.getKonfrontationstyp(), impact.getOrDefault(entry.getKonfrontationstyp(), 0.0) + entry.getGlobalerEinfluss());
+        }
+        List<Map.Entry<Konfrontationstyp, Integer>> sorted = new ArrayList<>(konfrontationen.entrySet());
+        sorted.sort((e1, e2) -> {
+            if (e1.getValue().equals(e2.getValue())) {
+                return Double.compare(impact.get(e1.getKey()), impact.get(e2.getKey()));
+            }
+            return Integer.compare(e2.getValue(), e1.getValue());
+        });
+        PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/data/" + "bericht_konfrontationen.txt");
+        for (Map.Entry<Konfrontationstyp, Integer> entry: sorted) {
+            writer.println(entry.getKey() + "&" + entry.getValue() + "$" + impact.get(entry.getKey()));
+        }
+        writer.close();
+    }
     public enum Konfrontationstyp{
         Individuell, Team, Galaktisch, Multiversal
     }
@@ -108,7 +132,7 @@ public class Main {
         String Antagonist;
         Konfrontationstyp Konfrontationstyp;
         String Ort;
-        Date Datum;
+        LocalDate Datum;
         Double GlobalerEinfluss;
 
         @XmlElement(name = "Id")
@@ -137,7 +161,7 @@ public class Main {
         }
 
         @XmlElement(name = "Datum")
-        public Date getDatum() {
+        public LocalDate getDatum() {
             return Datum;
         }
 
