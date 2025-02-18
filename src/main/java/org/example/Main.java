@@ -29,8 +29,8 @@ public class Main {
 //            System.out.println(entry);
 //        }
 //        getHeldenMitHöherenEinfluss(data);
-        getGalaktischeKonfrontationen(data);
-//        saveReport(data);
+//        getGalaktischeKonfrontationen(data);
+        saveReport(data);
     }
 
     public static List<MyData> getFromXMLFile() {
@@ -69,6 +69,10 @@ public class Main {
         return events;
     }
 
+    /**
+     * Get all heroes with a higher influence than the given value
+     * @param data
+     */
     public static void getHeldenMitHöherenEinfluss(List<MyData> data) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the minimum global influence: ");
@@ -80,6 +84,10 @@ public class Main {
         helden.forEach(System.out::println);
     }
 
+    /**
+     * Get all galactic confrontations sorted by date
+     * @param data
+     */
     public static void getGalaktischeKonfrontationen(List<MyData> data) {
         data.stream()
                 .filter(entry -> entry.getKonfrontationstyp().equals(Konfrontationstyp.Galaktisch))
@@ -87,6 +95,11 @@ public class Main {
                 .forEach(entry -> System.out.println(entry.getDatum() + ": " + entry.getHeld() + " vs. " + entry.getAntagonist() + " - " + entry.getOrt()));
     }
 
+    /**
+     * Save the report to a file in the given rules
+     * @param data
+     * @throws FileNotFoundException
+     */
     public static void saveReport(List<MyData> data) throws FileNotFoundException {
         Map<Konfrontationstyp, Integer> konfrontationen = new HashMap<>();
         Map<Konfrontationstyp, Double> impact = new HashMap<>();
