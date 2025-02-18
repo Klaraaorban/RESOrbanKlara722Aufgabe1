@@ -26,8 +26,8 @@ public class Main {
 //        for (MyData entry: data) {
 //            System.out.println(entry);
 //        }
-        getHeldenMitHöherenEinfluss(data);
-//        getGalaktischeKonfrontationen(data);
+//        getHeldenMitHöherenEinfluss(data);
+        getGalaktischeKonfrontationen(data);
     }
 
     public static List<MyData> getFromXMLFile() {
@@ -76,7 +76,12 @@ public class Main {
         helden.forEach(System.out::println);
     }
 
-
+    public static void getGalaktischeKonfrontationen(List<MyData> data) {
+        data.stream()
+                .filter(entry -> entry.getKonfrontationstyp().equals(Konfrontationstyp.Galaktisch))
+                .sorted((e1, e2) -> e2.getDatum().compareTo(e1.getDatum()))
+                .forEach(entry -> System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(entry.getDatum()) + ": " + entry.getHeld() + " vs. " + entry.getAntagonist() + " - " + entry.getOrt()));
+    }
 
     public enum Konfrontationstyp{
         Individuell, Team, Galaktisch, Multiversal
