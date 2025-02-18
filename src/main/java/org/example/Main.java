@@ -30,6 +30,7 @@ public class Main {
             System.out.println(entry);
         }
         getHeldenMitHöherenEinfluss(data, 0.5);
+        getGalaktischeKonfrontationen(data);
     }
 
     public static List<MyData> getFromXMLFile() {
@@ -74,7 +75,13 @@ public class Main {
                 .forEach(System.out::println);
     }
 
-
+//    Anzeige von "Galaktischen" Konfrontationen in absteigender Reihenfolge (0.5 Punkte)
+    public static void getGalaktischeKonfrontationen(List<MyData> data) {
+        data.stream()
+                .filter(entry -> entry.getKonfrontationstyp().equals(Konfrontationstyp.Galaktisch))
+                .sorted((e1, e2) -> e2.getDatum().compareTo(e1.getDatum()))
+                .forEach(System.out::println);
+    }
 
 
     public enum Konfrontationstyp{
