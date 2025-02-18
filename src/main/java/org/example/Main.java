@@ -29,6 +29,7 @@ public class Main {
         for (MyData entry: data) {
             System.out.println(entry);
         }
+        getHeldenMitHöherenEinfluss(data, 0.5);
     }
 
     public static List<MyData> getFromXMLFile() {
@@ -65,6 +66,15 @@ public class Main {
         }
         return events;
     }
+
+//    Anzeige von Helden mit einem höheren Globalen Einfluss als ein gegebener Wert (0.5 Punkte) mit stream
+    public static void getHeldenMitHöherenEinfluss(List<MyData> data, double einfluss) {
+        data.stream()
+                .filter(entry -> entry.getGlobalerEinfluss() > einfluss)
+                .forEach(System.out::println);
+    }
+
+
 
 
     public enum Konfrontationstyp{
