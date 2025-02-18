@@ -1,0 +1,272 @@
+<logs>
+  <log>
+    <Id>1</Id>
+    <Held>Wolverine</Held>
+    <Antagonist>Thanos</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>Latveria</Ort>
+    <Datum>2017-06-28</Datum>
+    <GlobalerEinfluss>819.79</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>2</Id>
+    <Held>Spider-Man</Held>
+    <Antagonist>Thanos</Antagonist>
+    <Konfrontationstyp>Multiversal</Konfrontationstyp>
+    <Ort>Latveria</Ort>
+    <Datum>2004-11-18</Datum>
+    <GlobalerEinfluss>952.06</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>3</Id>
+    <Held>Doctor Strange</Held>
+    <Antagonist>Doctor Doom</Antagonist>
+    <Konfrontationstyp>Multiversal</Konfrontationstyp>
+    <Ort>Titan</Ort>
+    <Datum>2006-09-23</Datum>
+    <GlobalerEinfluss>529.09</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>4</Id>
+    <Held>Black Widow</Held>
+    <Antagonist>Doctor Doom</Antagonist>
+    <Konfrontationstyp>Multiversal</Konfrontationstyp>
+    <Ort>Savage Land</Ort>
+    <Datum>2019-11-18</Datum>
+    <GlobalerEinfluss>160.77</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>5</Id>
+    <Held>Spider-Man</Held>
+    <Antagonist>Apocalypse</Antagonist>
+    <Konfrontationstyp>Galaktisch</Konfrontationstyp>
+    <Ort>X-Mansion</Ort>
+    <Datum>2021-11-13</Datum>
+    <GlobalerEinfluss>567.54</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>6</Id>
+    <Held>Wolverine</Held>
+    <Antagonist>Loki</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>Multiverse</Ort>
+    <Datum>2019-03-21</Datum>
+    <GlobalerEinfluss>70.03</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>7</Id>
+    <Held>Doctor Strange</Held>
+    <Antagonist>Green Goblin</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>Latveria</Ort>
+    <Datum>2001-03-07</Datum>
+    <GlobalerEinfluss>896.7</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>8</Id>
+    <Held>Captain America</Held>
+    <Antagonist>Magneto</Antagonist>
+    <Konfrontationstyp>Multiversal</Konfrontationstyp>
+    <Ort>Savage Land</Ort>
+    <Datum>2018-10-15</Datum>
+    <GlobalerEinfluss>788.72</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>9</Id>
+    <Held>Wolverine</Held>
+    <Antagonist>Ultron</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>Sakaar</Ort>
+    <Datum>2013-11-22</Datum>
+    <GlobalerEinfluss>25.78</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>10</Id>
+    <Held>Black Widow</Held>
+    <Antagonist>Thanos</Antagonist>
+    <Konfrontationstyp>Team</Konfrontationstyp>
+    <Ort>Asgard</Ort>
+    <Datum>2013-01-24</Datum>
+    <GlobalerEinfluss>505.54</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>11</Id>
+    <Held>Black Widow</Held>
+    <Antagonist>Apocalypse</Antagonist>
+    <Konfrontationstyp>Team</Konfrontationstyp>
+    <Ort>Asgard</Ort>
+    <Datum>2008-10-12</Datum>
+    <GlobalerEinfluss>197.86</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>12</Id>
+    <Held>Doctor Strange</Held>
+    <Antagonist>Loki</Antagonist>
+    <Konfrontationstyp>Galaktisch</Konfrontationstyp>
+    <Ort>New York</Ort>
+    <Datum>2006-01-07</Datum>
+    <GlobalerEinfluss>133.59</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>13</Id>
+    <Held>Doctor Strange</Held>
+    <Antagonist>Magneto</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>Latveria</Ort>
+    <Datum>2022-02-20</Datum>
+    <GlobalerEinfluss>640.93</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>14</Id>
+    <Held>Black Panther</Held>
+    <Antagonist>Magneto</Antagonist>
+    <Konfrontationstyp>Multiversal</Konfrontationstyp>
+    <Ort>New York</Ort>
+    <Datum>2017-09-25</Datum>
+    <GlobalerEinfluss>296.58</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>15</Id>
+    <Held>Wolverine</Held>
+    <Antagonist>Red Skull</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>X-Mansion</Ort>
+    <Datum>2023-09-21</Datum>
+    <GlobalerEinfluss>57.31</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>16</Id>
+    <Held>Black Panther</Held>
+    <Antagonist>Magneto</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>Titan</Ort>
+    <Datum>2004-02-18</Datum>
+    <GlobalerEinfluss>493.07</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>17</Id>
+    <Held>Deadpool</Held>
+    <Antagonist>Thanos</Antagonist>
+    <Konfrontationstyp>Team</Konfrontationstyp>
+    <Ort>Multiverse</Ort>
+    <Datum>2020-01-13</Datum>
+    <GlobalerEinfluss>504.88</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>18</Id>
+    <Held>Black Widow</Held>
+    <Antagonist>Doctor Doom</Antagonist>
+    <Konfrontationstyp>Team</Konfrontationstyp>
+    <Ort>Latveria</Ort>
+    <Datum>2006-02-25</Datum>
+    <GlobalerEinfluss>698.19</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>19</Id>
+    <Held>Deadpool</Held>
+    <Antagonist>Thanos</Antagonist>
+    <Konfrontationstyp>Multiversal</Konfrontationstyp>
+    <Ort>Knowhere</Ort>
+    <Datum>2017-04-30</Datum>
+    <GlobalerEinfluss>172.78</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>20</Id>
+    <Held>Black Widow</Held>
+    <Antagonist>Venom</Antagonist>
+    <Konfrontationstyp>Galaktisch</Konfrontationstyp>
+    <Ort>Sakaar</Ort>
+    <Datum>2012-03-13</Datum>
+    <GlobalerEinfluss>713.35</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>21</Id>
+    <Held>Hulk</Held>
+    <Antagonist>Green Goblin</Antagonist>
+    <Konfrontationstyp>Team</Konfrontationstyp>
+    <Ort>Titan</Ort>
+    <Datum>2022-06-19</Datum>
+    <GlobalerEinfluss>368.7</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>22</Id>
+    <Held>Captain America</Held>
+    <Antagonist>Doctor Doom</Antagonist>
+    <Konfrontationstyp>Galaktisch</Konfrontationstyp>
+    <Ort>X-Mansion</Ort>
+    <Datum>2014-08-12</Datum>
+    <GlobalerEinfluss>756.04</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>23</Id>
+    <Held>Black Widow</Held>
+    <Antagonist>Thanos</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>Titan</Ort>
+    <Datum>2007-03-02</Datum>
+    <GlobalerEinfluss>351.63</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>24</Id>
+    <Held>Wolverine</Held>
+    <Antagonist>Thanos</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>Asgard</Ort>
+    <Datum>2000-02-17</Datum>
+    <GlobalerEinfluss>310.84</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>25</Id>
+    <Held>Thor</Held>
+    <Antagonist>Galactus</Antagonist>
+    <Konfrontationstyp>Individuell</Konfrontationstyp>
+    <Ort>Asgard</Ort>
+    <Datum>2020-02-09</Datum>
+    <GlobalerEinfluss>500.0</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>26</Id>
+    <Held>Wolverine</Held>
+    <Antagonist>Magneto</Antagonist>
+    <Konfrontationstyp>Multiversal</Konfrontationstyp>
+    <Ort>Asgard</Ort>
+    <Datum>2005-10-27</Datum>
+    <GlobalerEinfluss>796.16</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>27</Id>
+    <Held>Captain America</Held>
+    <Antagonist>Loki</Antagonist>
+    <Konfrontationstyp>Team</Konfrontationstyp>
+    <Ort>X-Mansion</Ort>
+    <Datum>2008-05-25</Datum>
+    <GlobalerEinfluss>729.45</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>28</Id>
+    <Held>Wolverine</Held>
+    <Antagonist>Apocalypse</Antagonist>
+    <Konfrontationstyp>Galaktisch</Konfrontationstyp>
+    <Ort>X-Mansion</Ort>
+    <Datum>2014-12-20</Datum>
+    <GlobalerEinfluss>340.65</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>29</Id>
+    <Held>Deadpool</Held>
+    <Antagonist>Loki</Antagonist>
+    <Konfrontationstyp>Galaktisch</Konfrontationstyp>
+    <Ort>Multiverse</Ort>
+    <Datum>2003-07-06</Datum>
+    <GlobalerEinfluss>924.02</GlobalerEinfluss>
+  </log>
+  <log>
+    <Id>30</Id>
+    <Held>Deadpool</Held>
+    <Antagonist>Green Goblin</Antagonist>
+    <Konfrontationstyp>Multiversal</Konfrontationstyp>
+    <Ort>Wakanda</Ort>
+    <Datum>2008-12-22</Datum>
+    <GlobalerEinfluss>199.89</GlobalerEinfluss>
+  </log>
+</logs>
